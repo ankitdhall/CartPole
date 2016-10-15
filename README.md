@@ -1,2 +1,2 @@
-# CartPole-v0
-Solving CartPole-v0
+# CartPole
+Solving CartPole
