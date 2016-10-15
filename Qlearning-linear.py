@@ -17,16 +17,16 @@ EXPLORATION_RATE_DECAY = 0.5
 env = gym.make('CartPole-v0')
 
 NUM_ACTIONS = env.action_space.n
-NUM_STATES = 4
+NUM_OBS = 4
 
 #################### TensorFlow for linear model #####################
 
 session = tf.Session()
-state_ = tf.placeholder("float", [None, NUM_STATES])
+state_ = tf.placeholder("float", [None, NUM_OBS])
 targets = tf.placeholder("float", [None, NUM_ACTIONS])
 
 
-hidden_weights = tf.Variable(tf.random_uniform(shape=[NUM_STATES, NUM_ACTIONS], minval=-0.0001, maxval=0.0001, dtype=tf.float32))
+hidden_weights = tf.Variable(tf.random_uniform(shape=[NUM_OBS, NUM_ACTIONS], minval=-0.0001, maxval=0.0001, dtype=tf.float32))
 
 output = tf.matmul(state_, hidden_weights)
 
