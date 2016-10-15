@@ -8,7 +8,7 @@ import math
 import tensorflow as tf
 
 NUM_EPISODES = 1000
-MAX_T = 10000
+MAX_T = 1000
 GAMMA = 1
 
 EXPLORATION_RATE = 0.5
@@ -17,7 +17,7 @@ EXPLORATION_RATE_DECAY = 0.5
 env = gym.make('CartPole-v0')
 
 NUM_ACTIONS = env.action_space.n
-NUM_STATES = env.observation_space.n
+NUM_STATES = 4
 
 #################### TensorFlow for linear model #####################
 
